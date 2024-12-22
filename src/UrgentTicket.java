@@ -1,12 +1,8 @@
-/**
- * Represents an urgent ticket in the customer support system.
- * Extends the base Ticket class to include priority information.
- */
+
 public class UrgentTicket extends Ticket {
-    private int priority; // Priority level (lower number = higher priority)
+    private int priority;
 
     /**
-     * Constructor to create an urgent ticket.
      * @param id          the unique ID of the ticket
      * @param description a brief description of the ticket
      * @param priority    the priority level of the ticket
@@ -17,7 +13,6 @@ public class UrgentTicket extends Ticket {
     }
 
     /**
-     * Retrieves the priority of the ticket.
      * @return the priority level
      */
     public int getPriority() {
@@ -25,7 +20,6 @@ public class UrgentTicket extends Ticket {
     }
 
     /**
-     * Updates the priority of the ticket.
      * @param priority the new priority level
      */
     public void setPriority(int priority) {
@@ -33,7 +27,6 @@ public class UrgentTicket extends Ticket {
     }
 
     /**
-     * Generates a string representation of the urgent ticket.
      * @return a string describing the urgent ticket
      */
     @Override

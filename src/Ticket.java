@@ -1,13 +1,9 @@
-/**
- * Represents a generic ticket in the customer support system.
- * This serves as a base class for different types of tickets.
- */
+
 public class Ticket {
-    protected int id; // Unique identifier for the ticket
-    protected String description; // Description of the ticket
+    protected int id;
+    protected String description;
 
     /**
-     * Constructor to create a ticket.
      * @param id          the unique ID of the ticket
      * @param description a brief description of the ticket
      */
@@ -17,7 +13,6 @@ public class Ticket {
     }
 
     /**
-     * Retrieves the ticket ID.
      * @return the unique ticket ID
      */
     public int getId() {
@@ -25,7 +20,6 @@ public class Ticket {
     }
 
     /**
-     * Retrieves the description of the ticket.
      * @return the ticket description
      */
     public String getDescription() {
@@ -33,7 +27,6 @@ public class Ticket {
     }
 
     /**
-     * Generates a string representation of the ticket.
      * @return a string describing the ticket
      */
     @Override

@@ -52,9 +52,7 @@ public class InputHandler {
         }
     }
 
-    /**
-     * Displays the main menu options to the user.
-     */
+
     private void displayMenu() {
         System.out.println(ConsoleColor.BLUE + "\n==========================");
         System.out.println("  Customer Support System ");
@@ -70,9 +68,7 @@ public class InputHandler {
         System.out.print("Enter your choice: " + ConsoleColor.RESET);
     }
 
-    /**
-     * Handles adding a new ticket.
-     */
+
     private void handleAddTicket() {
         System.out.print("\nEnter the ticket description or Press Enter to return to menu: ");
         String description = scanner.nextLine();
@@ -119,9 +115,7 @@ public class InputHandler {
         System.out.println(ConsoleColor.GREEN + "\n✅ Ticket added successfully! Ticket ID: " + ticketId + ConsoleColor.RESET);
     }
 
-    /**
-     * Handles processing the next ticket in the queue.
-     */
+
     private void handleProcessNextTicket() {
         Ticket nextTicket = system.processNextTicket();
         if (nextTicket != null) {
@@ -131,9 +125,7 @@ public class InputHandler {
         }
     }
 
-    /**
-     * Handles searching for a ticket by ID.
-     */
+
     private void handleSearchTicket() {
         System.out.print("\nEnter the ticket ID to search or Press Enter to return to menu: ");
         try {
@@ -153,9 +145,7 @@ public class InputHandler {
         }
     }
 
-    /**
-     * Handles reprioritizing an urgent ticket.
-     */
+
     private void handleReprioritizeTicket() {
         System.out.print("\nEnter the ticket ID to reprioritize or Press Enter to return to menu: ");
         try {

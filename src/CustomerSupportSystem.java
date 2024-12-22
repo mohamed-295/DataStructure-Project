@@ -1,16 +1,12 @@
 import java.util.*;
 
-/**
- * Manages a ticketing system with both regular and urgent tickets.
- */
+
 public class CustomerSupportSystem {
     private final Queue<Ticket> regularTickets;
     private final PriorityQueue<UrgentTicket> urgentTickets;
     private int ticketCounter;
 
-    /**
-     * Constructor initializes the ticketing system.
-     */
+
     public CustomerSupportSystem() {
         this.regularTickets = new LinkedList<>();
         this.urgentTickets = new PriorityQueue<>(Comparator.comparingInt(UrgentTicket::getPriority));
@@ -18,7 +14,6 @@ public class CustomerSupportSystem {
     }
 
     /**
-     * Adds an urgent ticket to the system.
      * @param description the description of the ticket
      * @param urgent      flag indicating if the ticket is urgent
      * @param priority    the priority of the ticket (1-10, where 1 is the highest priority)
@@ -32,7 +27,6 @@ public class CustomerSupportSystem {
     }
 
     /**
-     * Adds a regular ticket to the system.
      * @param description the description of the ticket
      * @param urgent      flag indicating if the ticket is urgent
      * @return the ID of the created ticket
@@ -45,7 +39,6 @@ public class CustomerSupportSystem {
     }
 
     /**
-     * Processes and retrieves the next ticket in the system.
      * @return the next ticket to be processed, or null if no tickets are available
      */
     public Ticket processNextTicket() {
@@ -58,7 +51,6 @@ public class CustomerSupportSystem {
     }
 
     /**
-     * Searches for a ticket by ID.
      * @param id the ID of the ticket to search for
      * @return the ticket if found, or null if not found
      */
@@ -77,7 +69,6 @@ public class CustomerSupportSystem {
     }
 
     /**
-     * Reprioritizes an urgent ticket by its ID.
      * @param ticketId    the ID of the ticket to reprioritize
      * @param newPriority the new priority to assign to the ticket
      */
@@ -96,9 +87,7 @@ public class CustomerSupportSystem {
         }
     }
 
-    /**
-     * Clears all tickets from the system.
-     */
+
     public void clearAllTickets() {
         if (urgentTickets.isEmpty() && regularTickets.isEmpty()) {
             System.out.println(ConsoleColor.YELLOW + "⚠️ No tickets to clear." + ConsoleColor.RESET);
@@ -110,9 +99,7 @@ public class CustomerSupportSystem {
         System.out.println(ConsoleColor.GREEN + "✅ All tickets cleared." + ConsoleColor.RESET);
     }
 
-    /**
-     * Displays all tickets in the system.
-     */
+
     public void displayTickets() {
         if (!urgentTickets.isEmpty()) {
             System.out.println(ConsoleColor.RED + "\n🔴 Urgent Tickets:" + ConsoleColor.RESET);

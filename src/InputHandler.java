@@ -1,14 +1,11 @@
 import java.util.Scanner;
 
-/**
- * Handles user input and interaction for the Customer Support System.
- */
+
 public class InputHandler {
     private final CustomerSupportSystem system;
     private final Scanner scanner;
 
     /**
-     * Constructor for InputHandler.
      * @param system the instance of CustomerSupportSystem to manage tickets
      */
     public InputHandler(CustomerSupportSystem system) {
@@ -16,9 +13,7 @@ public class InputHandler {
         this.scanner = new Scanner(System.in);
     }
 
-    /**
-     * Main loop to handle user input and interact with the system.
-     */
+
     public void run() {
         while (true) {
             displayMenu();

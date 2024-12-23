@@ -49,7 +49,7 @@ public class InputHandler {
 
 
     private void displayMenu() {
-        System.out.println(ConsoleColor.BLUE + "\n==========================");
+        System.out.println(ConsoleColor.BLUE+ "\n==========================");
         System.out.println("  Customer Support System ");
         System.out.println("==========================");
         System.out.println("T - Add Ticket");
@@ -60,7 +60,7 @@ public class InputHandler {
         System.out.println("C - Clear All Tickets");
         System.out.println("X - Exit Program");
         System.out.println("==========================");
-        System.out.print("Enter your choice: " + ConsoleColor.RESET);
+        System.out.print("Enter your choice: " +  ConsoleColor.RESET);
     }
 
 
@@ -104,8 +104,8 @@ public class InputHandler {
         }
 
         int ticketId = urgent
-                ? system.addUrgentTicket(description, true, priority)
-                : system.addRegularTicket(description, false);
+                ? system.addUrgentTicket(description, priority)
+                : system.addRegularTicket(description);
 
         System.out.println(ConsoleColor.GREEN + "\n✅ Ticket added successfully! Ticket ID: " + ticketId + ConsoleColor.RESET);
     }

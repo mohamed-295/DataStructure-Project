@@ -15,11 +15,10 @@ public class CustomerSupportSystem {
 
     /**
      * @param description the description of the ticket
-     * @param urgent      flag indicating if the ticket is urgent
      * @param priority    the priority of the ticket (1-10, where 1 is the highest priority)
      * @return the ID of the created ticket
      */
-    public int addUrgentTicket(String description, boolean urgent, int priority) {
+    public int addUrgentTicket(String description, int priority) {
         ticketCounter++;
         UrgentTicket ticket = new UrgentTicket(ticketCounter, description, priority);
         urgentTickets.add(ticket);
@@ -28,10 +27,9 @@ public class CustomerSupportSystem {
 
     /**
      * @param description the description of the ticket
-     * @param urgent      flag indicating if the ticket is urgent
      * @return the ID of the created ticket
      */
-    public int addRegularTicket(String description, boolean urgent) {
+    public int addRegularTicket(String description) {
         ticketCounter++;
         Ticket ticket = new Ticket(ticketCounter, description);
         regularTickets.add(ticket);
